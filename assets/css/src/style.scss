@@ -532,6 +532,8 @@ button {
       right: 0px;
       z-index: 100;
       pointer-events: none;
+      overflow: scroll;
+      -webkit-overflow-scrolling: touch;
 
       &.show {
         pointer-events: all;

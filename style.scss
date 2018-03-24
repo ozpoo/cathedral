@@ -525,11 +525,13 @@ button {
     }
 
     .form-modal {
+      -webkit-overflow-scrolling: touch;
       position: fixed;
       top: 0px;
       right: 0px;
       width: 100vw;
       height: 100vh;
+      overflow: scroll;
       pointer-events: none;
       z-index: 100;
 
