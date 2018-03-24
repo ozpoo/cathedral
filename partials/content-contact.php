@@ -17,11 +17,11 @@
 
 <form id="form" action="https://www.honeybook.com/api/v2/workspace/widget_inquiries" method="post" name="form" target="honeybook">
 
-  <input name="vendor_id" value="5a8db33590853a2d8acad388" type="hidden">
-  <input name="vendor_name" value="Nate Stone" type="hidden">
-  <input name="contact_form_id" value="5ab36fc70df8490739e11e50" type="hidden">
-  <input name="company_id" value="5a8db56177292046c89b291d" type="hidden">
-  <input name="src_host" value="widget.honeybook.com" type="hidden">
+  <input id="vendor-id" name="vendor_id" value="5a8db33590853a2d8acad388" type="hidden">
+  <input id="vendor-name" name="vendor_name" value="Nate Stone" type="hidden">
+  <input id="contact-form-id" name="contact_form_id" value="5aa1a80986f6b66d3eb7f239" type="hidden">
+  <input id="company-id" name="company_id" value="5a8db56177292046c89b291d" type="hidden">
+  <input id="src-host" name="src_host" value="widget.honeybook.com" type="hidden">
 
   <div class="hb-field-group">
   <label for="hbf-email">Email address<span class="asterisk">*</span></label>
@@ -37,15 +37,21 @@
   </div>
 
   <div class="hb-field-group">
-    <label for="hbf-phone-number">Your phone number</label>
-    <div class="hide error">* Field is required</div>
-    <input id="hbf-phone-number" type="text" name="phone_number" placeholder="123-456-7890" autocomplete="off">
-  </div>
-
-  <div class="hb-field-group">
     <label for="hbf-event-date">Event date</label>
     <div class="hide error">* Field is required</div>
     <input type="text" name="event_date" placeholder="MM/DD/YY" autocomplete="off">
+  </div>
+
+  <div class="hb-field-group">
+    <label for="hbf-event-time">Event Time</label>
+    <div class="hide error">* Field is required</div>
+    <input type="text" name="event_time" placeholder="10:00AM" autocomplete="off">
+  </div>
+
+  <div class="hb-field-group">
+    <label for="hbf-event-guests">Estimated guest count</label>
+    <div class="hide error">* Field is required</div>
+    <input type="text" name="event_guests" placeholder="75" autocomplete="off">
   </div>
 
   <div class="hb-field-group">
@@ -64,18 +70,6 @@
       <label style="display: block; cursor: pointer;"><input type="radio" name="event_type" value="Birthdays" style="display: inline-block; margin-right: 0.4em; -webkit-appearance: radio;"><span style="vertical-align: middle; line-height: 2em;">Birthdays</span></label>
       <label style="display: block; cursor: pointer;"><input type="radio" name="event_type" value="Other" style="display: inline-block; margin-right: 0.4em; -webkit-appearance: radio;"><span style="vertical-align: middle; line-height: 2em;">Other</span></label>
     </fieldset>
-  </div>
-
-  <div class="hb-field-group">
-    <label for="hbf-event-guests">Estimated guest count</label>
-    <div class="hide error">* Field is required</div>
-    <input type="text" name="event_guests" placeholder="75" autocomplete="off">
-  </div>
-
-  <div class="hb-field-group">
-    <label for="hbf-event-budget">Estimated budget</label>
-    <div class="hide error">* Field is required</div>
-    <input type="text" name="event_budget" placeholder="$5000" autocomplete="off">
   </div>
 
   <div class="hb-field-group">
@@ -221,9 +215,10 @@
 </script>
 
 <!-- <script type="text/javascript" src="//d25purrcgqtc5w.cloudfront.net/assets/widgetiframe/iframeResizer.min.js"></script>
-<iframe src="https://widget.honeybook.com/assets_users_production/companies/5a8db56177292046c89b291d/widgets/5ab2fbe7d410e01aebbdbdb2/contact_form.html" frameBorder="0" width="100%" height="750"></iframe>
+<iframe src="https://widget.honeybook.com/assets_users_production/companies/5a8db56177292046c89b291d/widgets/5aa1a80986f6b66d3eb7f239/contact_form.html" frameBorder="0" width="100%" height="750"></iframe>
 <script type="text/javascript">
 iFrameResize({checkOrigin: false});
 </script> -->
+
 <!-- <iframe src="" style="display: none;" name="honeybook"></iframe> -->
 </section>
