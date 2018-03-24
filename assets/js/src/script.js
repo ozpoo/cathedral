@@ -12,7 +12,9 @@
 		});
 
 		function init() {
-			$("body").addClass("show");
+			setTimeout(function(){
+				$(".title-flash").removeClass("show");
+			}, 880);
 		}
 
 		function animate() {

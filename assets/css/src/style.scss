@@ -243,12 +243,6 @@ body {
 	font-size: 14px;
   font-size: calc(14px + .3vw);
   line-height: 1.5;
-  opacity: 0;
-  will-change: opacity;
-
-  &.show {
-    opacity: 1;
-  }
 
   &.no-scroll {
     overflow: hidden;
@@ -355,6 +349,33 @@ u {
 
 button {
   @include button-reset;
+}
+
+.title-flash {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  background: $black;
+  z-index: 10000;
+  transition: 660ms opacity ease-in-out;
+  will-change: opacity;
+  backface-visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+
+  svg {
+    width: 70vw;
+    max-width: 260px;
+  }
+
+  &.show {
+    opacity: 1;
+  }
 }
 
 .st0 {
