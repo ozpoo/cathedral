@@ -1,4 +1,3 @@
-<section class="screen"></section>
 <section class="form">
   <div class="close">
     <p>

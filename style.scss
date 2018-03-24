@@ -528,35 +528,24 @@ button {
       -webkit-overflow-scrolling: touch;
       position: fixed;
       top: 0px;
-      right: 0px;
-      width: 100vw;
+      left: 100vw;
+      width: 50vw;
       height: 100vh;
       overflow: scroll;
-      pointer-events: none;
+      backface-visibility: hidden;
+      transition: 660ms left ease-in-out;
+      will-change: left;
       z-index: 100;
 
       &.show {
-        pointer-events: all;
-
-        .form {
-          transform: translate3d(0, 0, 0);
-        }
+        left: 50vw;
       }
 
       .form {
-        -webkit-overflow-scrolling: touch;
-        width: 50%;
         padding: 4vh 4vw;
         padding-bottom: 16vh;
-        float: right;
-        overflow: scroll;
-        transform: translate3d(100%, 0, 0);
-        backface-visibility: hidden;
         background: $black;
         color: white;
-        transition: 660ms transform ease-in-out;
-        will-change: transform;
-        z-index: 20;
 
         .close {
           position: absolute;
@@ -753,24 +742,24 @@ input:-webkit-autofill {
 
       .form-modal {
         position: fixed;
-        top: 0px;
-        right: 0px;
+        top: 100vh;
+        left: 0px;
         width: 100vw;
         height: 100vh;
-        pointer-events: none;
-        z-index: 10000;
+        backface-visibility: hidden;
+        transition: 660ms top ease-in-out;
+        will-change: top;
+        z-index: 100000;
 
         &.show {
-          pointer-events: all;
-
-          .form {
-            transform: translate3d(0, 0, 0);
-          }
+          top: 0px;
+          left: 0px;
         }
 
         .form {
+          padding: 8vh 8vw;
+          padding-bottom: 16vh;
 
-          width: 100%;
           .close {
             position: absolute;
             top: 0px;

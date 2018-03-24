@@ -526,37 +526,26 @@ button {
 
     .form-modal {
       height: 100vh;
-      width: 100vw;
+      width: 50vw;
       position: fixed;
       top: 0px;
-      right: 0px;
+      left: 100vw;
       z-index: 100;
-      pointer-events: none;
       overflow: scroll;
       -webkit-overflow-scrolling: touch;
+      transition: 660ms left ease-in-out;
+      will-change: left;
+      backface-visibility: hidden;
 
       &.show {
-        pointer-events: all;
-
-        .form {
-          transform: translate3d(0, 0, 0);
-        }
+        left: 50vw;
       }
 
       .form {
         background: $black;
         color: white;
-        width: 50%;
         padding: 4vh 4vw;
         padding-bottom: 16vh;
-        float: right;
-        overflow: scroll;
-        z-index: 20;
-        -webkit-overflow-scrolling: touch;
-        transition: 660ms transform ease-in-out;
-        will-change: transform;
-        backface-visibility: hidden;
-        transform: translate3d(100%, 0, 0);
 
         .close {
           position: absolute;
@@ -755,22 +744,22 @@ input:-webkit-autofill {
         height: 100vh;
         width: 100vw;
         position: fixed;
-        top: 0px;
-        right: 0px;
-        z-index: 10000;
-        pointer-events: none;
+        top: 100vh;
+        left: 0px;
+        z-index: 100000;
+        transition: 660ms top ease-in-out;
+        will-change: top;
+        backface-visibility: hidden;
 
         &.show {
-          pointer-events: all;
-
-          .form {
-            transform: translate3d(0, 0, 0);
-          }
+          top: 0px;
+          left: 0px;
         }
 
         .form {
+          padding: 8vh 8vw;
+          padding-bottom: 16vh;
 
-          width: 100%;
           .close {
             position: absolute;
             top: 0px;
