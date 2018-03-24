@@ -5,9 +5,9 @@
       <a class="toggle-contact">
         <svg version="1.1"
         	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-        	 x="0px" y="0px" width="41.1px" height="41.1px" viewBox="0 0 41.1 41.1" style="enable-background:new 0 0 41.1 41.1;"
+        	 x="0px" y="0px" width="31.1px" height="31.1px" viewBox="0 0 31.1 31.1" style="enable-background:new 0 0 31.1 31.1;"
         	 xml:space="preserve">
-        <polygon class="st0" points="41.1,1.1 40,0 20.5,19.5 1.1,0 0,1.1 19.5,20.5 0,40 1.1,41.1 20.5,21.6 40,41.1 41.1,40 21.6,20.5 "/>
+        <polygon class="st0" points="31.1,1.1 30,0 15.5,14.5 1.1,0 0,1.1 14.5,15.5 0,30 1.1,31.1 15.5,16.6 30,31.1 31.1,30 16.6,15.5 "/>
         </svg>
       </a>
     </p>
