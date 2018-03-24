@@ -1,2 +1,2 @@
-# barchurch
-Repository for BC — Bar Church
+# cathedral
+Repository for CATH — The Cathedral
