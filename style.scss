@@ -436,6 +436,7 @@ button {
 
       a {
         border-bottom-width: 3px;
+        border-bottom-width: calc(1px + .2vw);
         cursor: pointer;
       }
 
@@ -647,7 +648,7 @@ input:-webkit-autofill {
 
 @media only screen and (max-width: 768px) {
   h2 {
-    font-size: 1.4em;
+    font-size: 1.3em;
 
     br {
       display: none;
@@ -703,12 +704,11 @@ input:-webkit-autofill {
 
       .intro {
         display: block;
-        padding-top: 22vh;
+        padding-top: 18vh;
         padding-bottom: 0px;
         text-align: center;
 
         a {
-          border-bottom-width: 3px;
           cursor: pointer;
         }
 
