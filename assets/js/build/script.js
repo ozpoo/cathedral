@@ -1,0 +1,1 @@
+!function(n,i,o){n(function(){"use strict";function i(){o(i)}n(window).load(function(){n("body").addClass("show"),i()});var o=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||function(n,i){window.setTimeout(n,1e3/60)}})}(jQuery);
