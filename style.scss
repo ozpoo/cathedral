@@ -542,6 +542,7 @@ button {
       }
 
       .form {
+        -webkit-overflow-scrolling: touch;
         position: absolute;
         top: 0px;
         left: 50%;

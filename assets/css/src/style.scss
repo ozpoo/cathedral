@@ -552,6 +552,7 @@ button {
         height: 100%;
         overflow: scroll;
         z-index: 20;
+        -webkit-overflow-scrolling: touch;
         transition: 660ms transform ease-in-out;
         will-change: transform;
         backface-visibility: hidden;
