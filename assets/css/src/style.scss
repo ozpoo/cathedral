@@ -548,10 +548,7 @@ button {
         color: white;
         width: 50%;
         padding: 4vh 4vw;
-        position: absolute;
-        top: 0px;
-        left: 50%;
-        height: 100%;
+        float: right;
         overflow: scroll;
         z-index: 20;
         -webkit-overflow-scrolling: touch;
