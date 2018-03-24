@@ -769,21 +769,8 @@ input:-webkit-autofill {
         }
 
         .form {
-          background: $black;
-          color: white;
-          width: 100%;
-          padding: 8vh 8vw;
-          position: absolute;
-          top: 0px;
-          left: 0;
-          height: 100%;
-          overflow: scroll;
-          z-index: 20;
-          transition: 660ms transform ease-in-out;
-          will-change: transform;
-          backface-visibility: hidden;
-          transform: translate3d(0, 100%, 0);
 
+          width: 100%;
           .close {
             position: absolute;
             top: 0px;
