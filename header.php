@@ -17,7 +17,7 @@
 
 		<meta property="og:title" content="<?php bloginfo('name'); ?>">
 		<meta property="og:description" content="<?php bloginfo('description'); ?>">
-		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/share.jpg?v=2">
+		<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/share.jpg?v=3">
 		<meta property="og:url" content="<?php echo home_url( $wp->request ); ?>">
 		<meta name="twitter:card" content="summary_large_image">
 
