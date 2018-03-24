@@ -12,6 +12,7 @@
 		});
 
 		function init() {
+			$(".title-flash").height($(window).height());
 			setTimeout(function(){
 				$(".title-flash").removeClass("show");
 			}, 880);
