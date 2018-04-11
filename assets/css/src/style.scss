@@ -447,6 +447,27 @@ button {
       }
     }
 
+    .rates {
+      position: fixed;
+      top: 2vh;
+      right: 4vw;
+      transform: translate3d(0, 0, 0);
+      z-index: 10;
+
+      a {
+        display: block;
+        // padding: calc(13px + .4vw) calc(13px + .4vw);
+        line-height: 1.2;
+        border-bottom: 2px solid $black;
+        // text-align: center;
+        width: 100%;
+
+        &:hover {
+          border-bottom-color: transparent;
+        }
+      }
+    }
+
     .intro {
       text-align: center;
       padding: 16vh 0;
