@@ -42,25 +42,25 @@
     </div>
 
     <div class="hb-field-group">
-      <label for="hbf-event-date">Event date</label>
+      <label for="hbf-event-date">Event date<span class="asterisk">*</span></label>
       <div class="hide error">* Field is required</div>
       <input type="text" name="event_date" placeholder="MM/DD/YY" autocomplete="off">
     </div>
 
     <div class="hb-field-group">
-      <label for="hbf-custom-3">Event Time</label>
+      <label for="hbf-custom-3">Event Time<span class="asterisk">*</span></label>
       <div class="hide error">* Field is required</div>
       <input type="text" name="custom_3" placeholder="10:00AM" autocomplete="off">
     </div>
 
     <div class="hb-field-group">
-      <label for="hbf-event-guests">Estimated guest count</label>
+      <label for="hbf-event-guests">Estimated guest count<span class="asterisk">*</span></label>
       <div class="hide error">* Field is required</div>
       <input type="text" name="event_guests" placeholder="75" autocomplete="off">
     </div>
 
     <div class="hb-field-group">
-      <label for="hbf-custom-2">What type of event are you hosting?</label>
+      <label for="hbf-custom-2">What type of event are you hosting?<span class="asterisk">*</span></label>
       <fieldset>
         <div class="hide error">* Please select an option below</div>
         <label style="display: block; cursor: pointer;"><input type="radio" name="custom_2" value="Wedding / Reception" style="display: inline-block; margin-right: 0.4em; -webkit-appearance: radio;"><span style="vertical-align: middle; line-height: 2em;">Wedding / Reception</span></label>
