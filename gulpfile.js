@@ -1,14 +1,10 @@
 const gulp = require('gulp');
 const uglify = require("gulp-uglify");
-const jshint = require("gulp-jshint");
 const sass = require('gulp-sass');
-const sassLint = require('gulp-sass-lint');
-const minifyCss = require("gulp-minify-css");
+const minify = require("gulp-minify-css");
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
-const cssdeclsort = require('css-declaration-sorter');
 const concat = require("gulp-concat");
-const stylish = require('jshint-stylish');
 
 var watchJS = true;
 var watchSCSS = true;
@@ -16,12 +12,28 @@ var watchSCSS = true;
 gulp.task('js', function () {
 	if(watchJS) {
 		watchJS = false;
-		gulp.src('assets/js/src/script.js')
-		.pipe(jshint())
-		.pipe(jshint.reporter(stylish))
-		.pipe(concat('script.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('assets/js/build'));
+
+		var libStream = gulp.src([
+				// 'assets/font/Font Awesome/svg-with-js/js/fontawesome-all.min.js',
+				// 'assets/js/_lib/smoothstate/smoothstate.min.js',
+				// 'assets/js/_lib/lettering/jquery.lettering.js',
+				// 'assets/js/_lib/textillate/jquery.textillate.js',
+				// 'assets/js/_lib/aos/aos.js',
+				// 'assets/js/_lib/sticky/sticky.min.js',
+				// 'assets/js/_lib/greensock-easing/minified/TweenMax.min.js',
+				// 'assets/js/_lib/greensock-easing/minified/easing/CustomEase.min.js',
+				// 'assets/js/_lib/lazysizes/lazysizes.min.js',
+				// 'assets/js/_lib/html2canvas/html2canvas.min.js',
+				// 'assets/js/_lib/js-cookie/js.cookie.js',
+				// 'assets/js/_lib/flickity/flickity.pkgd.min.js',
+				// 'assets/js/_lib/flickity/flickity.fullscreen.js',
+				// 'assets/js/_lib/tinycolor2/dist/tinycolor-min.js',
+				'assets/js/src/script.js'
+			])
+			.pipe(concat('script.js'))
+			.pipe(uglify())
+			.pipe(gulp.dest('assets/js/build'));
+
 		watchJS = true;
 	}
 });
@@ -30,15 +42,10 @@ gulp.task('scss', function () {
 	if(watchSCSS) {
 		watchSCSS = false;
 	  gulp.src('assets/css/src/style.scss')
-		.pipe(sassLint())
-	  .pipe(sassLint.format())
-	  .pipe(sassLint.failOnError())
-		.pipe(postcss([ cssdeclsort({order: 'smacss'}) ]))
-		.pipe(gulp.dest('./'))
-		.pipe(sass().on('error', sass.logError))
+		.pipe(concat('style.css'))
+		.pipe(sass())
 	  .pipe(postcss([ autoprefixer() ]))
-	  .pipe(concat('style.css'))
-		.pipe(minifyCss())
+		.pipe(minify())
 	  .pipe(gulp.dest('assets/css/build'));
 		watchSCSS = true;
 	}

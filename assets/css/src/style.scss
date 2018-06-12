@@ -216,16 +216,18 @@ $unit-05: calc(50px + .4vw);
 $unit-06: calc(60px + .4vw);
 
 * {
-	font-smoothing: antialiased;
+  font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 	box-sizing: border-box;
 	text-rendering: optimizeLegibility;
 
 	&:after, &:before {
-		font-smoothing: antialiased;
+    font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 		box-sizing: border-box;
 		text-rendering: optimizeLegibility;
 	}
@@ -268,7 +270,7 @@ p, ul, ol, h1, h2, h3, h4, h5 {
 
 h1, h2, h3, h4, h5 {
   font-family: $font-02;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 h2 {
@@ -338,7 +340,7 @@ a {
 	}
 
 	&:hover {
-    border-bottom: 2px solid transparent;
+    border-bottom: 1px solid transparent;
 	}
 }
 
@@ -458,7 +460,7 @@ button {
         display: block;
         // padding: calc(13px + .4vw) calc(13px + .4vw);
         line-height: 1.2s;
-        border-bottom: 2px solid $black;
+        border-bottom: 1px solid $black;
         // text-align: center;
         width: 100%;
 
@@ -477,8 +479,7 @@ button {
       position: relative;
 
       a {
-        border-bottom-width: 3px;
-        border-bottom-width: calc(1px + .2vw);
+        border-bottom-width: 1px;
         cursor: pointer;
       }
 
@@ -546,20 +547,18 @@ button {
     }
 
     .form-modal {
-      height: 100vh;
-      width: 50vw;
-      position: fixed;
-      top: 0px;
-      left: 100vw;
-      z-index: 100;
-      overflow: scroll;
-      -webkit-overflow-scrolling: touch;
-      transition: 660ms left ease-in-out;
-      will-change: left;
-      backface-visibility: hidden;
+      pointer-events: none;
 
       &.show {
-        left: 50vw;
+        pointer-events: all;
+
+        .form {
+          left: 50vw;
+        }
+
+        .screen {
+          opacity: 1;
+        }
       }
 
       .form {
@@ -567,6 +566,17 @@ button {
         color: white;
         padding: 4vh 4vw;
         padding-bottom: 16vh;
+        z-index: 10;
+        width: 50vw;
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        left: 100vw;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+        transition: 660ms left ease-in-out;
+        will-change: left;
+        backface-visibility: hidden;
 
         .close {
           position: absolute;
@@ -627,12 +637,16 @@ button {
       }
 
       .screen {
-        width: 100%;
-        position: absolute;
+        width: 100vw;
+        position: fixed;
         top: 0px;
         left: 0;
-        height: 100%;
+        height: 100vh;
         z-index: 1;
+        backdrop-filter: blur(4px);
+        opacity: 0;
+        transition: opacity 800ms ease;
+        background: rgba(0,0,0,.2);
       }
     }
 
@@ -762,24 +776,25 @@ input:-webkit-autofill {
       }
 
       .form-modal {
-        height: 100vh;
-        width: 100vw;
-        position: fixed;
-        top: 100vh;
-        left: 0px;
         z-index: 100000;
-        transition: 660ms top ease-in-out;
-        will-change: top;
-        backface-visibility: hidden;
 
         &.show {
           top: 0px;
           left: 0px;
+
+          .form {
+            top: 0;
+            left: 0;
+          }
         }
 
         .form {
+          transition: 660ms top ease-in-out;
           padding: 8vh 8vw;
           padding-bottom: 16vh;
+          top: -100vh;
+          width: 100vw;
+          left: 0;
 
           .close {
             position: absolute;
