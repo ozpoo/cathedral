@@ -176,3 +176,10 @@
   </section>
   <section class="screen"></section>
 </section>
+
+<section class="thankyou">
+  <div>
+    <h2>Thank you!</h2>
+    <p>You will receive a confirmation email soon.</p>
+  </div>
+</section>
