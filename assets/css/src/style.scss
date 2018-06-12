@@ -625,6 +625,7 @@ footer {
     padding-bottom: 2vh;
     width: 100%;
     text-align: center;
+    line-height: 1.8;
   }
 }
 
@@ -748,54 +749,150 @@ input:-webkit-autofill {
       display: none;
     }
   }
-  .splash {
 
-    main {
-      padding: 0px;
+  main {
+    padding: 0px;
+  }
 
-      .contact {
-        position: fixed;
-        bottom: 0vh;
-        right: 50vw;
-        transform: translate3d(50%, 0, 0);
-        z-index: 1000;
-        width: 100%;
+  header {
+    .contact {
+      position: fixed;
+      bottom: 0vh;
+      right: 50vw;
+      transform: translate3d(50%, 0, 0);
+      z-index: 1000;
+      width: 100%;
 
-        button {
-          display: block;
-          padding: calc(13px + 2vw)0;
+      button {
+        display: block;
+        padding: calc(13px + 2vw)0;
+      }
+
+      p {
+        padding: 0px;
+      }
+    }
+
+    .logo {
+      left: 50vw;
+      transform: translate3d(-50%, 0, 0);
+    }
+
+    .name {
+      position: fixed;
+      bottom: auto;
+      left: auto;
+      top: 2vh;
+      right: 4vw;
+      transform: translate3d(0, 0, 0);
+      z-index: 10;
+      display: none;
+    }
+  }
+
+  footer {
+
+    .form-modal {
+      z-index: 100000;
+
+      &.show {
+        top: 0px;
+        left: 0px;
+
+        .form {
+          top: 0;
+          left: 0;
+        }
+      }
+
+      .form {
+        transition: 660ms top ease-in-out;
+        padding: 8vh 8vw;
+        padding-bottom: 16vh;
+        top: -100vh;
+        width: 100vw;
+        left: 0;
+
+        .close {
+          position: absolute;
+          top: 0px;
+          right: 0px;
+
+          a {
+            border: none;
+            cursor: pointer;
+          }
+
+          p {
+            padding-top: $unit-02;
+          }
+        }
+
+        h4, p {
+          padding-left: 0px;
+          margin-bottom: 6vh;
         }
 
         p {
-          padding: 0px;
+          padding-top: 0px;
+        }
+
+        ::placeholder {
+          opacity: .4;
+        }
+
+        label {
+          font-size: .6em;
+          text-transform: uppercase;
+          letter-spacing: .04em;
+          display: block;
+          padding: 1vh 0;
+        }
+
+        input, select, fieldset {
+          -webkit-appearance: none;
+          padding: 18px;
+          width: 100%;
+          border-radius: 0;
+          background: rgba(255,255,255,.06);
+
+          &[type=radio] {
+            width: auto;
+            margin-right: 1vw!important;
+          }
+        }
+
+        textarea {
+          padding: 18px;
+          width: 100%;
+          height: 180px;
+          background: rgba(255,255,255,.06);
+          resize: none;
         }
       }
 
-      .logo {
-        left: 50vw;
-        transform: translate3d(-50%, 0, 0);
-      }
-
-      .name {
-        position: fixed;
-        bottom: auto;
-        left: auto;
-        top: 2vh;
-        right: 4vw;
-        transform: translate3d(0, 0, 0);
-        z-index: 10;
+      .screen {
         display: none;
       }
+    }
 
-      .social {
-        padding-top: 0;
-        padding-bottom: 0px;
+    .social {
+      padding-top: 0;
+      padding-bottom: 0px;
 
-        a {
-          margin: 0 2vw;
-        }
+      a {
+        margin: 0 2vw;
       }
+    }
 
+    .foot {
+      padding-bottom: 20vh;
+    }
+  }
+
+  .splash {
+
+    main {
       .intro {
         text-align: center;
         padding-top: 18vh;
@@ -823,90 +920,6 @@ input:-webkit-autofill {
         }
       }
 
-      .form-modal {
-        z-index: 100000;
-
-        &.show {
-          top: 0px;
-          left: 0px;
-
-          .form {
-            top: 0;
-            left: 0;
-          }
-        }
-
-        .form {
-          transition: 660ms top ease-in-out;
-          padding: 8vh 8vw;
-          padding-bottom: 16vh;
-          top: -100vh;
-          width: 100vw;
-          left: 0;
-
-          .close {
-            position: absolute;
-            top: 0px;
-            right: 0px;
-
-            a {
-              border: none;
-              cursor: pointer;
-            }
-
-            p {
-              padding-top: $unit-02;
-            }
-          }
-
-          h4, p {
-            padding-left: 0px;
-            margin-bottom: 6vh;
-          }
-
-          p {
-            padding-top: 0px;
-          }
-
-          ::placeholder {
-            opacity: .4;
-          }
-
-          label {
-            font-size: .6em;
-            text-transform: uppercase;
-            letter-spacing: .04em;
-            display: block;
-            padding: 1vh 0;
-          }
-
-          input, select, fieldset {
-            -webkit-appearance: none;
-            padding: 18px;
-            width: 100%;
-            border-radius: 0;
-            background: rgba(255,255,255,.06);
-
-            &[type=radio] {
-              width: auto;
-              margin-right: 1vw!important;
-            }
-          }
-
-          textarea {
-            padding: 18px;
-            width: 100%;
-            height: 180px;
-            background: rgba(255,255,255,.06);
-            resize: none;
-          }
-        }
-
-        .screen {
-          display: none;
-        }
-      }
-
       .about {
         padding: 4vh 4vw;
         padding-top: 4vh;
@@ -930,10 +943,15 @@ input:-webkit-autofill {
           }
         }
       }
+    }
+  }
 
-      .foot {
-        padding-bottom: 20vh;
-      }
+  .privacy-policy {
+    padding-top: 18vh;
+
+    .content {
+      padding: 4vh 4vw;
+      padding-top: 4vh;
     }
   }
 }
