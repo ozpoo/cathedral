@@ -54,7 +54,7 @@
     </div>
 
     <div class="hb-field-group">
-      <label for="hbf-event-guests">Estimated guest count<span class="asterisk">*</span></label>
+      <label for="hbf-event-guests">Estimated guest count</label>
       <div class="hide error">* Field is required</div>
       <input type="text" name="event_guests" placeholder="75" autocomplete="off">
     </div>
