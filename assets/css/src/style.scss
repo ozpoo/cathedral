@@ -383,6 +383,27 @@ button {
   fill: $black;
 }
 
+.flickity-page-dots {
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -2vw;
+  bottom: calc(-20px + -1vw);
+
+  .dot {
+    width: 6px;
+    height: 6px;
+    margin: 0 6px;
+    margin: 0 calc(4px + .4vw);
+    background: $black;
+    opacity: 1;
+
+    &.is-selected {
+      background: #C5B358;
+    }
+  }
+}
+
 header {
 
   .title-flash {
@@ -647,6 +668,7 @@ main {
       justify-content: center;
       align-items: center;
       position: relative;
+      z-index: 10;
 
       a {
         border-bottom-width: 1px;
@@ -667,9 +689,13 @@ main {
 
     .hero {
       width: 100%;
+      position: relative;
+      z-index: 1;
 
       figure {
         height: auto;
+        display: block;
+        width: 100%;
 
         img {
           width: 100%;

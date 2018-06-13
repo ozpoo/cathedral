@@ -4,6 +4,8 @@
 
 		'use strict';
 
+		var $flky;
+
 		$(window).load (function() {
 
 			init();
@@ -16,6 +18,30 @@
 			setTimeout(function(){
 				$(".title-flash").removeClass("show");
 			}, 880);
+			$flky = new Flickity('.flky', {
+				accessibility: true,
+				adaptiveHeight: false,
+				autoPlay: 6000,
+				cellAlign: 'center',
+				cellSelector: undefined,
+				contain: false,
+				draggable: true,
+				dragThreshold: 3,
+				freeScroll: false,
+				selectedAttraction: 0.04,
+				friction: 1,
+				groupCells: false,
+				initialIndex: 0,
+				lazyLoad: false,
+				percentPosition: true,
+				prevNextButtons: false,
+				pageDots: true,
+				resize: true,
+				rightToLeft: false,
+				setGallerySize: true,
+				watchCSS: false,
+				wrapAround: true
+			});
 		}
 
 		function animate() {
