@@ -6,15 +6,18 @@
 
 		var $flky, $flipit;
 
-		$(window).load (function() {
+		$(window).load(function() {
 
 			init();
 			animate();
 
 		});
 
+		$(window).resize(function() {
+			setHeight();
+		});
+
 		function init() {
-			$(".title-flash, .thankyou").height($(window).height());
 			setTimeout(function(){
 				$(".title-flash").removeClass("show");
 			}, 880);
@@ -53,6 +56,10 @@
 			$(".rightButton").on("click", function(){
 				$flky.next();
 			});
+		}
+
+		function setHeight() {
+			$(".title-flash, .thankyou").height($(window).height());
 		}
 
 		function animate() {
