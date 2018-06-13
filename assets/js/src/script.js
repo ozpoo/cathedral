@@ -22,7 +22,7 @@
 			setTimeout(function(){
 				$(".title-flash").removeClass("show");
 			}, 880);
-			if($(document).scrollTop() < $(window).height()*.75) {
+			if($(document).scrollTop() < $(window).height()*.6) {
 				$flipit = true;
 			} else {
 				$flipit = false;
@@ -67,7 +67,7 @@
 			requestAnimationFrame( animate );
 			console.log($flipit);
 			if($flipit) {
-				if($(document).scrollTop() > ($(window).height()*.75)) {
+				if($(document).scrollTop() > ($(window).height()*.6)) {
 					$flky.next();
 					$flipit = false;
 				}
