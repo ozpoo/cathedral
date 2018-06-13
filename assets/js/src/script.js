@@ -18,6 +18,7 @@
 		});
 
 		function init() {
+			setHeight();
 			setTimeout(function(){
 				$(".title-flash").removeClass("show");
 			}, 880);
