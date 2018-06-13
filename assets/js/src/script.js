@@ -4,7 +4,7 @@
 
 		'use strict';
 
-		var $flky;
+		var $flky, $flipit;
 
 		$(window).load (function() {
 
@@ -18,10 +18,15 @@
 			setTimeout(function(){
 				$(".title-flash").removeClass("show");
 			}, 880);
+			if($(document).scrollTop() < $(window).height()/3) {
+				$flipit = true;
+			} else {
+				$flipit = false;
+			}
 			$flky = new Flickity('.flky', {
 				accessibility: true,
 				adaptiveHeight: false,
-				autoPlay: 6000,
+				autoPlay: false,
 				cellAlign: 'center',
 				cellSelector: undefined,
 				contain: false,
@@ -42,10 +47,23 @@
 				watchCSS: false,
 				wrapAround: true
 			});
+			$(".leftButton").on("click", function(){
+				$flky.previous();
+			});
+			$(".rightButton").on("click", function(){
+				$flky.next();
+			});
 		}
 
 		function animate() {
 			requestAnimationFrame( animate );
+			console.log($flipit);
+			if($flipit) {
+				if($(document).scrollTop() > ($(window).height()/3)) {
+					$flky.next();
+					$flipit = false;
+				}
+			}
 		}
 
 		var requestAnimationFrame = ( function (){

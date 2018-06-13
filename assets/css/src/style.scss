@@ -599,7 +599,7 @@ footer {
       top: 0px;
       left: 0;
       height: 100vh;
-      z-index: 1;
+      z-index: 3;
       backdrop-filter: blur(4px);
       opacity: 0;
       transition: opacity 800ms ease;
@@ -668,7 +668,7 @@ main {
       justify-content: center;
       align-items: center;
       position: relative;
-      z-index: 10;
+      z-index: 2;
 
       a {
         border-bottom-width: 1px;
@@ -699,6 +699,40 @@ main {
 
         img {
           width: 100%;
+        }
+      }
+
+      .flky {
+        position: relative;
+        z-index: 1;
+      }
+
+      .controls {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+
+        .leftButton {
+          width: 50%;
+          height: auto;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          height: 100%;
+          cursor: w-resize;
+        }
+
+        .rightButton {
+          width: 50%;
+          height: auto;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          height: 100%;
+          cursor: e-resize;
         }
       }
     }
