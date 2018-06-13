@@ -53,9 +53,15 @@
 			});
 			$(".leftButton").on("click", function(){
 				$flky.previous();
+				if($flipit) {
+					$flipit = false;
+				}
 			});
 			$(".rightButton").on("click", function(){
 				$flky.next();
+				if($flipit) {
+					$flipit = false;
+				}
 			});
 		}
 
