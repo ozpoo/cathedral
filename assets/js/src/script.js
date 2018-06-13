@@ -33,7 +33,7 @@
 				draggable: true,
 				dragThreshold: 3,
 				freeScroll: false,
-				selectedAttraction: 0.04,
+				selectedAttraction: 0.06,
 				friction: 1,
 				groupCells: false,
 				initialIndex: 0,

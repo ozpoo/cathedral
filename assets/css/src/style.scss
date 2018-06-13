@@ -702,6 +702,16 @@ main {
         }
       }
 
+      figure {
+        // left: 0 !important;
+        opacity: 0;
+        transition: opacity 660ms ease;
+      }
+
+      figure.is-selected {
+        opacity: 1;
+      }
+
       .flky {
         position: relative;
         z-index: 1;
