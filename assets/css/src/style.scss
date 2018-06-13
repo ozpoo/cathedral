@@ -820,7 +820,7 @@ input:-webkit-autofill {
       bottom: 0vh;
       right: 50vw;
       transform: translate3d(50%, 0, 0);
-      z-index: 1000;
+      z-index: 10;
       width: 100%;
 
       button {
