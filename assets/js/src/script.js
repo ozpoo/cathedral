@@ -7,10 +7,8 @@
 		var $flky, $flipit;
 
 		$(window).load(function() {
-
 			init();
 			animate();
-
 		});
 
 		$(window).resize(function() {
@@ -27,30 +25,32 @@
 			} else {
 				$flipit = false;
 			}
-			$flky = new Flickity('.flky', {
-				accessibility: true,
-				adaptiveHeight: false,
-				autoPlay: false,
-				cellAlign: 'center',
-				cellSelector: undefined,
-				contain: false,
-				draggable: true,
-				dragThreshold: 3,
-				freeScroll: false,
-				selectedAttraction: 0.06,
-				friction: 1,
-				groupCells: false,
-				initialIndex: 0,
-				lazyLoad: false,
-				percentPosition: true,
-				prevNextButtons: false,
-				pageDots: true,
-				resize: true,
-				rightToLeft: false,
-				setGallerySize: true,
-				watchCSS: false,
-				wrapAround: true
-			});
+			if($(".flky").length) {
+				$flky = new Flickity('.flky', {
+					accessibility: true,
+					adaptiveHeight: false,
+					autoPlay: false,
+					cellAlign: 'center',
+					cellSelector: undefined,
+					contain: false,
+					draggable: true,
+					dragThreshold: 3,
+					freeScroll: false,
+					selectedAttraction: 0.06,
+					friction: 1,
+					groupCells: false,
+					initialIndex: 0,
+					lazyLoad: false,
+					percentPosition: true,
+					prevNextButtons: false,
+					pageDots: true,
+					resize: true,
+					rightToLeft: false,
+					setGallerySize: true,
+					watchCSS: false,
+					wrapAround: true
+				});
+			}
 			$(".leftButton").on("click", function(){
 				$flky.previous();
 				if($flipit) {
@@ -71,8 +71,8 @@
 
 		function animate() {
 			requestAnimationFrame( animate );
-			console.log($flipit);
-			if($flipit) {
+			// console.log($flipit);
+			if($flipit && $flky) {
 				if($(document).scrollTop() > ($(window).height()*.6)) {
 					$flky.next();
 					$flipit = false;

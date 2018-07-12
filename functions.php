@@ -65,13 +65,6 @@ add_action('init', 'header_scripts');
 
 function conditional_scripts () {
 
-  if (is_page('pagenamehere')) {
-
-    wp_register_script('scriptname',
-      get_template_directory_uri() . '/assets/js/scriptname.js',
-      array('jquery'), '1.0.0');
-    wp_enqueue_script('scriptname');
-  }
 }
 add_action('wp_print_scripts', 'conditional_scripts');
 

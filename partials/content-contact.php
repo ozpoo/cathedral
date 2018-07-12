@@ -2,7 +2,7 @@
   <section class="form">
     <div class="close">
       <p>
-        <a class="toggle-contact">
+        <a class="close-contact">
           <svg version="1.1"
           	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
           	 x="0px" y="0px" width="31.1px" height="31.1px" viewBox="0 0 31.1 31.1" style="enable-background:new 0 0 31.1 31.1;"
@@ -123,14 +123,16 @@
 
   			$(".toggle-contact").on("click", function(e) {
   				$(".form-modal").toggleClass("show");
+          $(".form-modal").toggleClass("visible");
   				$("body").toggleClass("no-scroll");
   			});
 
-  			$(".screen").on("click", function(e) {
+  			$(".screen, .close-contact").on("click", function(e) {
   				$(".form-modal").toggleClass("show");
   				$("body").toggleClass("no-scroll");
   				setTimeout(function(){
   					$(".form-modal .form").scrollTop(0);
+            $(".form-modal").toggleClass("visible");
   				}, 1220);
   			});
 

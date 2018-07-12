@@ -295,6 +295,12 @@ h1, h2, h3, h4, h5 {
   font-weight: normal;
 }
 
+h1 {
+  font-size: 3.2em;
+  line-height: 1.2;
+  text-align: center;
+}
+
 h2 {
   font-size: 2.2em;
   line-height: 1.2;
@@ -505,6 +511,7 @@ footer {
 
   .form-modal {
     pointer-events: none;
+    opacity: 0;
 
     &.show {
       pointer-events: all;
@@ -516,6 +523,10 @@ footer {
       .screen {
         opacity: 1;
       }
+    }
+
+    &.visible {
+      opacity: 1;
     }
 
     .form {
@@ -788,6 +799,32 @@ main {
   }
 }
 
+.gallery {
+
+  main {
+    padding: 2vw;
+  }
+
+  gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    figure {
+      width: 25%;
+      padding: 2vw;
+
+      button {
+        cursor: crosshair;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
 .privacy-policy {
 
   .content {
@@ -1024,6 +1061,22 @@ input:-webkit-autofill {
             width: 50%;
           }
         }
+      }
+    }
+  }
+
+  .gallery {
+    padding-top: 18vh;
+
+    main {
+      padding: 2vw;
+    }
+
+    gallery {
+
+      figure {
+        width: 50%;
+        padding: 2vw;
       }
     }
   }
