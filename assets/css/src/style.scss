@@ -509,6 +509,8 @@ header {
 
 footer {
 
+  padding-bottom: 12vh;
+
   .form-modal {
     pointer-events: none;
     opacity: 0;
@@ -980,6 +982,15 @@ input:-webkit-autofill {
     padding: 0px;
   }
 
+  .flickity-page-dots {
+    width: auto;
+    left: auto;
+    right: 4vw;
+    transform: none;
+    bottom: -2vw;
+    bottom: calc(-20px + -1vw);
+  }
+
   header {
     .contact {
       position: fixed;
@@ -1190,6 +1201,14 @@ input:-webkit-autofill {
         .controls {
           display: none;
         }
+      }
+
+      .gallery-link {
+        position: absolute;
+        bottom: 0;
+        left: 4vw;
+        z-index: 100;
+        transform: translate3d(0%,50%,0%);
       }
 
       .about {

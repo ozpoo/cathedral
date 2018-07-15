@@ -6,7 +6,7 @@
 				</section>
 
 				<section class="foot">
-					<p><small>&copy; <?php the_date('Y'); ?> Cathedral &mdash; <a href="mailto:info@seattlecathedral.com">info@seattlecathedral.com</a> &mdash; <a href="<?php echo site_url('/privacy-policy', 'http'); ?>">Privacy Policy</a></small></p>
+					<p><small>&copy; <?php the_date('Y'); ?> Cathedral &mdash; <a href="mailto:info@seattlecathedral.com">info@seattlecathedral.com</a> &mdash; <a href="<?php echo site_url('/privacy-policy/', 'http'); ?>">Privacy Policy</a> &mdash; <a href="<?php echo site_url('/gallery/', 'http'); ?>">Gallery</a></small></p>
 				</section>
 			</footer>
 			<?php wp_footer(); ?>
