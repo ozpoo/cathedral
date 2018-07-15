@@ -20,12 +20,12 @@
 			setTimeout(function(){
 				$(".title-flash").removeClass("show");
 			}, 880);
-			if($(document).scrollTop() < $(window).height()*.6) {
-				$flipit = true;
-			} else {
-				$flipit = false;
-			}
 			if($(".flky").length) {
+				if($(document).scrollTop() < $(window).height()*.6) {
+					$flipit = true;
+				} else {
+					$flipit = false;
+				}
 				$flky = new Flickity('.flky', {
 					accessibility: true,
 					adaptiveHeight: false,
@@ -51,6 +51,32 @@
 					wrapAround: true
 				});
 			}
+			if($(".glry").length) {
+				$flky = new Flickity('.glry', {
+					accessibility: true,
+					adaptiveHeight: false,
+					autoPlay: false,
+					cellAlign: 'center',
+					cellSelector: undefined,
+					contain: false,
+					draggable: true,
+					dragThreshold: 3,
+					freeScroll: false,
+					selectedAttraction: 0.06,
+					friction: 1,
+					groupCells: false,
+					initialIndex: 0,
+					lazyLoad: false,
+					percentPosition: true,
+					prevNextButtons: false,
+					pageDots: false,
+					resize: true,
+					rightToLeft: false,
+					setGallerySize: true,
+					watchCSS: false,
+					wrapAround: true
+				});
+			}
 			$(".leftButton").on("click", function(){
 				$flky.previous();
 				if($flipit) {
@@ -62,6 +88,19 @@
 				if($flipit) {
 					$flipit = false;
 				}
+			});
+			$(".glry-open").on("click", function(){
+				$flky.select($(this).attr("data-index"), false, true);
+				$("slider").toggleClass("show");
+			});
+			$(".glry-close").on("click", function(){
+				$("slider").toggleClass("show");
+			});
+			$(".glry-back").on("click", function(){
+				$flky.previous();
+			});
+			$(".glry-forth").on("click", function(){
+				$flky.next();
 			});
 		}
 
