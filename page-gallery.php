@@ -22,9 +22,9 @@
 							<img
 								draggable="false"
 								alt=""
-								src="<?php echo wp_get_attachment_image_src($image['id'], 'micro')[0]; ?>"
+								src="<?php echo wp_get_attachment_image_src($image['id'], '01')[0]; ?>"
 								sizes="auto"
-								data-srcset="<?php echo wp_get_attachment_image_srcset($image['id'], 'small'); ?>"
+								data-srcset="<?php echo wp_get_attachment_image_srcset($image['id'], '02'); ?>"
 								class="lazyload" />
 								</button>
 						</figure>
@@ -43,9 +43,9 @@
 									<img
 										draggable="false"
 										alt=""
-										src="<?php echo wp_get_attachment_image_src($image['id'], 'micro')[0]; ?>"
+										src="<?php echo wp_get_attachment_image_src($image['id'], '02')[0]; ?>"
 										sizes="auto"
-										data-srcset="<?php echo wp_get_attachment_image_srcset($image['id'], 'large'); ?>"
+										data-srcset="<?php echo wp_get_attachment_image_srcset($image['id'], '09'); ?>"
 										class="lazyload" />
 								</figure>
 							<?php endforeach; ?>

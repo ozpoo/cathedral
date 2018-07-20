@@ -842,7 +842,12 @@ main {
       padding: 2vw;
 
       button {
+        width: 100%;
         cursor: crosshair;
+
+        img {
+          width: 100%;
+        }
 
         &:hover {
 
