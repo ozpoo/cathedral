@@ -18,7 +18,15 @@
 						<?php $count = 0; ?>
 					<?php foreach( $images as $image ): ?>
 						<figure>
-							<button class="glry-open" data-index="<?php echo $count++; ?>?"><?php echo wp_get_attachment_image( $image['ID'], $size ); ?></button>
+							<button class="glry-open" data-index="<?php echo $count++; ?>?">
+							<img
+								draggable="false"
+								alt=""
+								src="<?php echo wp_get_attachment_image_src($image['id'], 'micro')[0]; ?>"
+								sizes="auto"
+								data-srcset="<?php echo wp_get_attachment_image_srcset($image['id'], 'small'); ?>"
+								class="lazyload" />
+								</button>
 						</figure>
 					<?php endforeach; ?>
 					</gallery>
@@ -32,7 +40,13 @@
 						<section class="glry">
 							<?php foreach( $images as $image ): ?>
 								<figure>
-									<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
+									<img
+										draggable="false"
+										alt=""
+										src="<?php echo wp_get_attachment_image_src($image['id'], 'micro')[0]; ?>"
+										sizes="auto"
+										data-srcset="<?php echo wp_get_attachment_image_srcset($image['id'], 'large'); ?>"
+										class="lazyload" />
 								</figure>
 							<?php endforeach; ?>
 						</section>
